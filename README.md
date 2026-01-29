@@ -24,6 +24,11 @@ We are in the process of curating our dataset and benchmark. They will be made p
 
 You can find a representative sample of the benchmark in the file `./data/voxaudio_test.jsonl`.
 
+For the audio quality assessment code, please refer to: https://github.com/hkchengrex/av-benchmark  
+For PE-AV assessment code, please refer to: https://github.com/facebookresearch/perception_models  
+For aesthetics assessment code, please refer to: https://github.com/facebookresearch/audiobox-aesthetics  
+For ASR transcription, please refer to: https://github.com/openai/whispe
+
 ![dataset](./DB.png)
 
 ## Our DemoPage
