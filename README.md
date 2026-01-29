@@ -14,10 +14,11 @@ We present VoxAudio, a causal autoregressive flow matching model for unified and
 
 ## Dataset & Benchmark
 
-![dataset](./DB.png)
 We are in the process of curating our dataset and benchmark. They will be made publicly available to the research community when paper is accepted.
 
 You can find a representative sample of the benchmark in the file `./data/voxaudio_test.jsonl`.
+
+![dataset](./DB.png)
 
 ## Our DemoPage
 Our demo page is hosted at: [https://voxaudio.github.io/](https://voxaudio.github.io/).
