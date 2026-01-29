@@ -1,0 +1,50 @@
+base_config:
+  - ./base.yaml
+
+audiovae_ckpt_path: ./ext_weights/audiovae_64/G_6600000.pth
+latent_dim: 64
+latent_seq_len: 200
+max_duration: 15
+latent_hz: 12.5
+text_seq_len: 350
+pad_to_max_length: False
+
+load_latent: True 
+audio_sample_rate: 24000
+
+save_interval: 10000
+eval_interval: 10000
+
+use_ema: True
+update_after_step: 2000
+
+use_pos_ema: False
+ema_update_interval: 10
+ema_save_interval: 5000
+sigma_rels_min: 0.0005
+sigma_rels_max: 0.001
+
+chunk_size: 8
+depth: 18
+fused_depth: 12
+num_heads: 16
+
+dataloader_type: bucket
+dfot_hidden_dim: 512
+
+lr_decay_iters: 300000
+train_iters: 300000
+
+eval_iters: 20
+
+text_feature_layer: [0, 12, -1]
+use_repa: True
+load_repa: True
+zs_dim: 2048
+
+remove_speech_prob: 0.2
+text_encoder_for_gen: 't5'
+text_encoder_dim_for_gen: 1024
+
+pretrain_model_path: False
+training_json_dir: xxx

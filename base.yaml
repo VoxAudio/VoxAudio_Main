@@ -1,0 +1,73 @@
+###### Training Args ######
+seed: 3409
+
+# data
+data_path: xxx
+train_data_path: xxx
+valid_data_path: xxx  
+test_data_path: xxx
+data_impl: multimodal
+dataloader_type: cyclic
+split: 100,0,0
+num_workers: 4
+prefetch_factor: 4
+multimodal_threads_num: 10
+
+# learning rate
+lr: 1.0e-4
+min_lr: 5.0e-5
+lr_warmup_iters: 1000
+lr_decay_style: cosine
+lr_decay_iters: 300000
+
+# optimizer
+adam_beta1: 0.9
+adam_beta2: 0.98
+weight_decay: 1.0e-6
+bf16: True
+clip_grad: 1.0
+
+# iteration
+train_iters: 300000
+
+# model parallel
+use_distributed_optimizer: True
+tensor_model_parallel_size: 1
+pipeline_model_parallel_size: 1
+
+# logging
+log_interval: 1
+save_interval: 10000
+eval_interval: 10000
+tensorboard_queue_size: 1
+log_timers_to_tensorboard: True
+log_batch_size_to_tensorboard: True
+log_validation_ppl_to_tensorboard: True
+
+# LLM args (unused)
+timing_log_level: 2
+no_bias: True
+fp32_rope: True
+untie_embeddings_and_output_weights: True
+make_vocab_size_divisible_by: 256
+hidden_dropout: 0
+attention_dropout: 0
+make_ffn_dim_multiple_of: 256
+activation: swiglu
+use_rmsnorm: True
+pos_emb: rotary
+rotary_emb_base: 1000000
+num_layers: 0
+hidden_size: 3584
+ffn_multi: 5.28
+num_attention_heads: 28
+seq_length: 16384
+max_position_embeddings: 16384
+layernorm_epsilon: 1.0e-06
+qkv_bias: True
+group_query_attention: True
+num_query_groups: 4
+use_flash_cross_entropy: True
+reduce_loss_per_iteration: True
+gather_source_per_iteration: True
+inplace_flash_cross_entropy: True

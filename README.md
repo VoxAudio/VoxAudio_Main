@@ -10,6 +10,12 @@ We present VoxAudio, a causal autoregressive flow matching model for unified and
 
 ## Model Architecture
 
+Example of running the basic inference script:
+
+```bash
+./inference.sh
+```
+
 ![architecture](./model.png)
 
 ## Dataset & Benchmark
